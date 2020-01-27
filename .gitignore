@@ -1,0 +1,17 @@
+*.gem
+*.rbc
+Gemfile.lock
+.config
+.rvmrc
+/.bundle/
+/vendor/
+/lib/bundler/man/
+/pkg/
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/
+/coverage/
+/spec/reports/
+/tmp/
+*.rdb
