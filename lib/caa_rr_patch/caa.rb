@@ -1,15 +1,8 @@
 # frozen_string_literal: true
 
-# https://tools.ietf.org/html/rfc8659#section-4.1
-#
-#    +0-1-2-3-4-5-6-7-|0-1-2-3-4-5-6-7-|
-#    | Flags          | Tag Length = n |
-#    +----------------|----------------+...+---------------+
-#    | Tag char 0     | Tag char 1     |...| Tag char n-1  |
-#    +----------------|----------------+...+---------------+
-#    +----------------|----------------+.....+----------------+
-#    | Value byte 0   | Value byte 1   |.....| Value byte m-1 |
-#    +----------------|----------------+.....+----------------+
+##
+# The Certification Authority Authorization (CAA) DNS Resource Record
+
 # rubocop: disable Style/ClassAndModuleChildren
 class Resolv::DNS::Resource::IN::CAA < Resolv::DNS::Resource
   TypeValue = 257 # rubocop: disable Naming/ConstantName
@@ -17,6 +10,15 @@ class Resolv::DNS::Resource::IN::CAA < Resolv::DNS::Resource
   ClassHash[[TypeValue, ClassValue]] = self
 
   def initialize(flags, tag, value)
+    # https://tools.ietf.org/html/rfc8659#section-4.1
+    #    +0-1-2-3-4-5-6-7-|0-1-2-3-4-5-6-7-|
+    #    | Flags          | Tag Length = n |
+    #    +----------------|----------------+...+---------------+
+    #    | Tag char 0     | Tag char 1     |...| Tag char n-1  |
+    #    +----------------|----------------+...+---------------+
+    #    +----------------|----------------+.....+----------------+
+    #    | Value byte 0   | Value byte 1   |.....| Value byte m-1 |
+    #    +----------------|----------------+.....+----------------+
     @flags = flags
     @tag = tag
     @value = value

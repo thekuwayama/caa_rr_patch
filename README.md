@@ -6,6 +6,8 @@
 
 `caa_rr_patch` is the patch that adds CAA Resource Record.
 
+* https://tools.ietf.org/html/rfc8659
+
 
 ## Installation
 
