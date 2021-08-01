@@ -6,7 +6,7 @@
 
 `caa_rr_patch` is the patch that adds CAA Resource Record.
 
-* https://tools.ietf.org/html/rfc8659
+* https://datatracker.ietf.org/doc/html/rfc8659
 
 
 ## Installation
@@ -29,7 +29,7 @@ irb(main):001:0> require 'caa_rr_patch'
 irb(main):002:1* Resolv::DNS.new.getresources(
 irb(main):003:1*   "google.com",
 irb(main):004:1*   Resolv::DNS::Resource::IN::CAA
-irb(main):005:0> ) { |rr| pp rr }
+irb(main):005:0> )
 => [#<Resolv::DNS::Resource::IN::CAA:0x0123456789abcdef @flags="\x00", @tag="issue", @value="pki.goog", @ttl=77777>]
 ```
 
