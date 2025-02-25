@@ -9,6 +9,11 @@
 * https://datatracker.ietf.org/doc/html/rfc8659
 
 
+## :warning: Disclaimer :warning:
+
+`resolv` version 0.4.0 supports CAA record. Use `resolv` instead of `caa_rr_patch`.
+
+
 ## Installation
 
 The gem is available at [rubygems.org](https://rubygems.org/gems/caa_rr_patch). You can install it the following.
